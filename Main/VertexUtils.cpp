@@ -19,10 +19,17 @@ vector<vertex> generateVertexArray(int size) {
 	return result;
 }
 
-vector<vector<float>> generateDistanceMatrix(vector<vertex> points) {
+DistanceMatrix generateDistanceMatrix(vector<vertex> points) {
+	DistanceMatrix result;
+
 	vector<vector<float>> matrix = vector<vector<float>>();
+	vector<int> horiz = vector<int>();
+	vector<int> vert = vector<int>();
+
 	for (size_t i = 0; i < points.size(); i++) {
 		vector<float> row = vector<float>();
+		horiz.push_back(i);
+		vert.push_back(i);
 		for (size_t k = 0; k < points.size(); k++) {
 			if (i != k) {
 				row.push_back(points.at(i).distanceTo(points.at(k)));
@@ -33,7 +40,10 @@ vector<vector<float>> generateDistanceMatrix(vector<vertex> points) {
 		}
 		matrix.push_back(row);
 	}
-	return matrix;
+	result.matrix = matrix;
+	result.horizontal_headers = horiz;
+	result.vertical_headers = vert;
+	return result;
 }
 
 MatrixAndLength rowsAndColumnsReduction(vector<vector<float>> matrix) {

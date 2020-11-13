@@ -1,2 +1,6 @@
 ﻿  Main.cpp
+  VertexUtils.cpp
+c:\users\crewd\source\repos\main\main\vertexutils.cpp(13): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+c:\users\crewd\source\repos\main\main\vertexutils.cpp(14): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+  Создание кода...
   Main.vcxproj -> C:\Users\crewd\source\repos\Main\Debug\Main.exe

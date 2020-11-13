@@ -6,7 +6,7 @@
 #include "DistanceMatrix.h"
 
 vector<vertex> generateVertexArray(int size);
-vector<vector<float>> generateDistanceMatrix(vector<vertex> points);
+DistanceMatrix generateDistanceMatrix(vector<vertex> points);
 void displayMatrix(vector<vector<float>> matrix);
 MatrixAndLength rowsAndColumnsReduction(vector<vector<float>> matrix);
 vector<vector<float>> calculateFinesMatrix(vector<vector<float>> matrix);
